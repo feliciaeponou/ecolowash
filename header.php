@@ -59,21 +59,21 @@ if (!isset($_SESSION['nom'])) {
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto text-center mr-lg-5">
 					<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="./">ECOLOWASHAFRICA
+						<a class="nav-link" href="apropos">ECOLOWASH AFRICA
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="apropos">ECOLOWASHAFRICA</a>
+						<a class="nav-link" href="centres.php">NOS CENTRES</a>
 					</li>
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
 						<a class="nav-link" href="services">SERVICES</a>
 					</li>
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="activites">ACTIVITES</a>
+						<a class="nav-link" href="washtocash">PARRAINAGE</a>
 					</li>
 					<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="connexion">INSCRIPTION/CONNEXION</a>
+						<a class="nav-link" href="connexion">CONNEXION</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="contact">CONTACT</a>

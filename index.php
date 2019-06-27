@@ -172,14 +172,13 @@ Station Shell Abidjan 2 Plateaux Aghien
 	<div class="gallery py-5" id="projects">
 		<div class="container py-xl-5 py-lg-3">
 			<h3 class="tittle text-center font-weight-bold text-uppercase mb-sm-5 mb-4">
-				<span class="font-weight-bold text-center"></span>Projets</h3>
+				<span class="font-weight-bold text-center"></span>WASH TO CASH</h3>
 			<div class="gallery-info">
 				<div class="row">
-					<div class="col-sm-6 gallery-grids">
-						<a href="images/wash.jpg" class="gallery-box" data-lightbox="example-set" data-title="Petroleum and Gas">
-							<img src="images/wash.jpg" alt="" class="img-fluid zoom-img">
+					<div class="col-sm-10 gallery-grids">
+							<p>Avec notre Offre WASHTOCASH rejoignez une forte communaute et gagner de l'argent en lavant votre voiture</p>
 							<div class="gallery-text-agile  text-center p-2">
-								<h4>Wash To Cash</h4>
+								<h3><a href="essai.pdf">En Savoir Plus</a></h3>
 							</div>
 						</a>
 					</div>

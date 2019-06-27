@@ -119,18 +119,18 @@ session_start();
 				<span class="font-weight-bold text-center"></span>Nos Services</h3>
 			<div class="row welcome-bottom">
 				<div class="col-sm-4 welcome-grid">
-					<i class="fab fa-gripfire"></i>
+					
 					<h4 class="my-3">Préparation de véhicules neufs et d'occasion</h4>
 					<p>Vous êtes un profesionnel de l’automobile et vous souhaitez externaliser l'entretien de votre flotte automobile pour une meilleure gestion et plus de souplesse ?</p>
 				</div>
 				<div class="col-sm-4 welcome-grid my-sm-0 my-4">
-					<i class="fas fa-tint"></i>
+					
 				<h4 class="my-3">Prestation de lavage express sans eau de basket</h4>
 					<p>Parce vous n’avez pas le temps de faire la ver vos basket, nous vous proposons un service express de lavage de vos basket à travers les stations de lavage Ecolowash</p>
 				</div>
 	
 	<div class="col-sm-4 welcome-grid mt-sm">
-					<i class="far fa-lightbulb"></i>
+					
 					<h4 class="my-3">Services complémentaires</h4>
 					<p>Désinfection du circuit de climatisation - Désinfection de l’habitacle  -  Nettoyage, des grilles et du circuit d’aération  - Protection Carrosserie longue Durée  - Protection de pare-brise - Taches de goudron/Résine  § </p>
 				</div>
@@ -140,13 +140,13 @@ session_start();
 				
 		
 				<div class="col-sm-4 welcome-grid mt-sm-5 mt-4">
-					<i class="fas fa-fire-extinguisher"></i>
+				
 				<h4 class="my-3">Du nettoyage de votre véhicule à la préparation à la vente</h4>
 					<p>Vous pouvez bénéfiez de prestations de hautes qualitées dans nos centres esthétique et de lavage auto Ecolowash.</p>
 				</div>
 				
 				<div class="col-sm-4 welcome-grid mt-sm-5 mt-4">
-					<i class="fas fa-fire-extinguisher"></i>
+				
 				<h4 class="my-3">Externalisation du nettoyage de votre flotte automobile</h4>
 					<p>Gestionnaire de flotte automobile ? Grâce à Ecolowash valorisez l'image de votre entreprise en ayant des véhicules toujours propres.</p>
 				</div>
@@ -159,9 +159,9 @@ session_start();
 	<div style="background:url(images/shella1.jpg); background-size:cover;min-height:440px;">
 
    <div class="container" style="padding:150px; color:#fff; font-size:40px;text-align:center; text-shadow:1px 1px 10px #333;">
-Lancement du lavage <b style="color:#49ef16;">Ecolowash</b><br>
-Station Shell Abidjan 2 Plateaux Aghien 
-	<p><a href="register" class="btn btn-lg btn-success">Inscrivez-vous!</a></p>
+Votre lavage <b style="color:#49ef16;">Ecolowash</b><br>
+Station Shell Abidjan 2 Plateaux Aghien disponible
+	<p><a href="centres" class="btn btn-lg btn-success">S'Y RENDRE!</a></p>
 		
 	</div>
 		
@@ -193,7 +193,7 @@ Station Shell Abidjan 2 Plateaux Aghien
 		<div class="container-fluid py-lg-5 py-md-4">
 			<div class="row py-xl-3">
 				<div class="col-lg-9 ">
-					<h2 class="video-agile text-capitalize text-white mb-2">lavez vos véhicules et gagnez de l'argent <h1>WASH TO CASH</h1></h2>
+					<h2 class="video-agile text-capitalize text-white mb-2"><h1>WASH TO CASH</h1>lavez vos véhicules et gagnez de l'argent Rejoignez notre réseau!</h2>
 					<p>Wash to cash est un condensé d'avantages et de services innovants qui viennent accroitre votre niveau de ressources</p>
 					<p>
 						Avec notre Offre WASHTOCASH rejoignez une forte communaute et gagner de l'argent en lavant votre voiture

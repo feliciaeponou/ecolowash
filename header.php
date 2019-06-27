@@ -59,7 +59,7 @@ if (!isset($_SESSION['nom'])) {
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto text-center mr-lg-5">
 					<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="./">ACCEUIL
+						<a class="nav-link" href="./">ECOLOWASHAFRICA
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>

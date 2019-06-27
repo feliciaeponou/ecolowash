@@ -168,7 +168,7 @@ Station Shell Abidjan 2 Plateaux Aghien
 	</div>
 	<!-- //team -->
 
-	<!-- projects -->
+	<!-- projects
 	<div class="gallery py-5" id="projects">
 		<div class="container py-xl-5 py-lg-3">
 			<h3 class="tittle text-center font-weight-bold text-uppercase mb-sm-5 mb-4">
@@ -176,7 +176,7 @@ Station Shell Abidjan 2 Plateaux Aghien
 			<div class="gallery-info">
 				<div class="row">
 					<div class="col-sm-10 gallery-grids">
-							<p>Avec notre Offre WASHTOCASH rejoignez une forte communaute et gagner de l'argent en lavant votre voiture</p>
+							<p></p>
 							<div class="gallery-text-agile  text-center p-2">
 								<h3><a href="essai.pdf">En Savoir Plus</a></h3>
 							</div>
@@ -187,17 +187,20 @@ Station Shell Abidjan 2 Plateaux Aghien
 			</div>
 		</div>
 	</div>
-	<!-- //projects -->
+	//projects -->
 
 	<div class="video-w3l py-5" data-vide-bg="video/1">
 		<div class="container-fluid py-lg-5 py-md-4">
 			<div class="row py-xl-3">
 				<div class="col-lg-9 ">
-					<h2 class="video-agile text-capitalize text-white mb-2">lavez vos véhicules et gagnez de l'argent</h2>
+					<h2 class="video-agile text-capitalize text-white mb-2">lavez vos véhicules et gagnez de l'argent <h1>WASH TO CASH</h1></h2>
 					<p>Wash to cash est un condensé d'avantages et de services innovants qui viennent accroitre votre niveau de ressources</p>
+					<p>
+						Avec notre Offre WASHTOCASH rejoignez une forte communaute et gagner de l'argent en lavant votre voiture
+					</p>
 				</div>
 				<div class="col-lg-3">
-					<a href="washtocash" class="btn scroll mt-4">En savoir Plus</a>
+					<a href="essai.pdf" class="btn btn-succes">En savoir Plus</a>
 				</div>
 			</div>
 		</div>

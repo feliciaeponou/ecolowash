@@ -1,4 +1,10 @@
 <!-- footer -->
+<style type="">
+	.footer{
+		font-family: 'Arial';
+		color: white;
+	}
+</style>
 	<footer>
 		<div class="w3ls-footer-grids py-sm-4 py-3">
 			<div class="container py-xl-5 py-lg-3">

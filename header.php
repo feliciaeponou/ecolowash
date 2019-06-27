@@ -59,7 +59,7 @@ if (!isset($_SESSION['nom'])) {
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto text-center mr-lg-5">
 					<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-						<a class="nav-link" href="apropos">ECOLOWASH AFRICA
+						<a class="nav-link" href="propos">ECOLOWASH AFRICA
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
@@ -152,7 +152,7 @@ if (!isset($_SESSION['nom'])) {
 								</a>
 							</li>
 							<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-								<a class="nav-link" href="apropos">ECOLOWASHAFRICA</a>
+								<a class="nav-link" href="propos">ECOLOWASHAFRICA</a>
 							</li>
 							<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
 								<a class="nav-link" href="services">SERVICES</a>

@@ -145,7 +145,7 @@ html {
   left: -9999px;
 }
 
-input[type=radio]:checked + label>div {
+.pricing-table input[type=radio]:checked + label>div {
   border: 1px solid #fff;
   box-shadow: 0 0 5px 5px #090;
 }
@@ -155,11 +155,6 @@ input[type=radio] + label>div {
   /* transition: 500ms all; */
 }
 
-input[type=radio]:checked + label>div {
-  transform: 
-    rotateZ(-10deg) 
-    rotateX(10deg);
-}
 
 .contain {
   position: relative;

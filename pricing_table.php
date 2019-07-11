@@ -145,7 +145,7 @@ html {
   left: -9999px;
 }
 
-input[type=radio]:checked + label>div {
+.pricing-table input[type=radio]:checked + label>div {
   border: 1px solid #fff;
   box-shadow: 0 0 5px 5px #090;
 }
@@ -155,11 +155,6 @@ input[type=radio] + label>div {
   /* transition: 500ms all; */
 }
 
-input[type=radio]:checked + label>div {
-  transform: 
-    rotateZ(-10deg) 
-    rotateX(10deg);
-}
 
 .contain {
   position: relative;
@@ -192,7 +187,7 @@ input[type=radio]:checked + label>div {
         </ul>
         <span class="pricing-price"></span>
         <input 
-  type="radio" name="formule" value="eco_express"
+  type="radio" name="formule" value="Eco Express"
   id="eco_express" class="input-hidden" />
 <label for="eco_express">
 <div class="pricing-button">
@@ -215,7 +210,7 @@ input[type=radio]:checked + label>div {
         </ul>
         <span class="pricing-price"></span>
         <input 
-  type="radio" name="formule" value="interieur_complet"
+  type="radio" name="formule" value="Intérieur complet"
   id="interieur_complet" class="input-hidden" /> <label for="interieur_complet">
   <div class="pricing-button">
   CHOISIR
@@ -236,7 +231,7 @@ input[type=radio]:checked + label>div {
         </ul>
         <span class="pricing-price"></span>
         <input 
-  type="radio" name="formule" value="integrale"
+  type="radio" name="formule" value="Intégrale"
   id="integrale" class="input-hidden" />
 <label for="integrale">
 <div class="pricing-button">

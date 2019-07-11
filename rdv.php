@@ -5,6 +5,22 @@ include ("header.php");
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+<link rel="stylesheet"
+  href="https://rawgit.com/Eonasdan/bootstrap-datetimepicker/master/build/css/bootstrap-datetimepicker.min.css">
+<script src="https://rawgit.com/Eonasdan/bootstrap-datetimepicker/master/build/js/bootstrap-datetimepicker.min.js"></script>
+<script>
+// Get today's date
+var today = new Date();
+
+$('#datetimepicker1').datetimepicker({
+    defaultDate: today,
+    format: 'DD/MM/YYYY H:mm:ss',
+    sideBySide: true,
+    minDate: today
+});
+</script>
+
 <style>
 * {
   box-sizing: border-box;
@@ -91,7 +107,8 @@ button:hover {
   left: -9999px;
 }
 input[type=radio]:checked + label>img {
-  border-left: 6px solid #090;
+  /* border-left: 6px solid #090; */
+  box-shadow: 0 0 5px 5px #090;
 }
 
 /* Stuff after this is only to make things more pretty */
@@ -121,18 +138,27 @@ html {
       transparent .1em
     );
 }
+
+.center {
+  display : block;
+  margin : auto;
+}
+
+hr {
+  color : #333;
+}
 </style>
 <body>
 
-<form name="myForm" id="regForm" action="verif">
-  <h1>RESERVATION</h1>
+<form method="post" name="myForm" id="regForm" action="verification_reservation">
+  <h1>RESERVATION</h1><hr>
   <!-- One "tab" for each step in the form: -->
-  <div class="tab"> 
+  <div class="tab">
     <br><br> 
     <h2> 1 - Choisissez une formule </h2> <br>
     <?php include('pricing_table.php'); ?>
   </div>
-  <div class="tab">
+  <div class="tab grille">
   <br>
   <br>
   <h2>2 - Souhaitez vous une prestation supplémentaire ?</h2><br>
@@ -148,42 +174,51 @@ html {
   </div>
 
   <div class="tab">
+  <center>
   <br>
   <br>
-  <h2>4 - </h2><br> 
 
-<label>Voulez une prestation à domicile ou en centre ?</label> <br>
+<h3>Voulez une prestation à domicile ou en centre ?</h3> <br>
 
-<input type="radio" name="lieu" value="domicile" id="domicile">
-<label for="domicile">A Domicile</label><br>
-<input type="radio" name="lieu" value="centre" id="centre"> 
-<label for="centre">En centre</label><br>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-3">
+<input 
+  type="radio" name="lieu" 
+  id="domicile" class="input-hidden" value="Domicile" />
+<label for="domicile">
+<img class="center" src="images/domicile.png" width="100"><br>
+A domicile
+</label>
+</div>
+<div class="col-md-3">
+<input 
+  type="radio" name="lieu" 
+  id="centre" class="input-hidden" value="En Centre" />
+<label for="centre">
+<img class="center" src="images/centre.png" width="100"><br>
+En centre
+</label>
+</div>
+<div class="col-md-3"></div>
+</div>
+<br><br><hr>
+<h3 >Dates et heures auxquelles vous pouvez prendre rendez-vous </h3>
 
-<label >Quel jour voulez vous passer ?</label><br>
+    <?php include('datetimepicker.php'); ?>
 
-<p><input type="date" id="datepicker"></p><br>
-<label >A quelle heure voulez-vous passer ?</label><br>
-<input type="datetime" name="heure"><br>
+<br><hr>
+<h3>Méthode de paiement</h3><br>
+<a name="payer" > <img src="images/paiementYup.png" width="100" alt="YUP" ></a>
 
-
-<button name="payer" class="btn btn-default btn-block"> Payez par <img src="images/logo_yup.jpg" width="50" alt="YUP" ></button>
-
-    
+    </center>
   </div>
 
-  <div class="tab">Birthday:
-    <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-  </div>
-  <div class="tab">Login Info:
-    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-  </div> <br><br>
+ <br><br>
   <div style="overflow:auto;">
     <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Précédent</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Suivant</button>
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->
@@ -210,9 +245,9 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").innerHTML = "Réserver";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").innerHTML = "Suivant";
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
@@ -274,18 +309,19 @@ function validateForm() {
     }
 
   } 
+
+  if (x[currentTab] == x[3]) {
+    var lieux = document.getElementsByName("lieu");
+    var date_heure = document.getElementsByName("date_heure");
     
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if ( y[i].value == "bonjour" )  {
-      alert('invalid');
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
+    if (lieux[0].checked || lieux[1].checked || date_heure.value == "") {
+        valid = true;
+    } else {
       valid = false;
     }
-  }
+
+  } 
+    
   
   
   
@@ -307,17 +343,7 @@ function fixStepIndicator(n) {
 }
 </script>
 
-<script>
-// Get today's date
-var today = new Date();
 
-$("#datepicker").datepicker({
-    changeMonth: true,
-    changeYear: true,
-    minDate: today // set the minDate to the today's date
-    // you can add other options here
-});
-</script>
 
 </body>
 </html>

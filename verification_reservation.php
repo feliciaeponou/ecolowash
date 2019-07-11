@@ -1,4 +1,9 @@
-<?php include('header.php'); ?>
+<?php 
+session_start();
+include('config.php');
+$id = $_SESSION['id_user'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,37 +13,67 @@
     <title></title>
 </head>
 <body>
+
+    <div>
+    <?php 
+     include('header.php');
+    ?>
+    </div>
     <div class="container">
+    <br><br><br><br>
     
-    <form action="" method="post">
-    <h1>Récapitulatif de la réservation</h1>
+    <h1 style="text-align : center;">RECAPITULATIF DE LA RESERVATION</h1> <br>
+
+    <!-- Datatable -->
+
+  <center>
+    <table id="example" class="display table table-striped table-bordered" cellspacing="0" >
+        <thead>
+            <tr>
+                <th>FORMULE</th>
+                <th>PRESTATION SUPPLEMENTAIRE</th>
+                <th>CATEGORIE VEHICULE</th>
+                <th>LIEU</th>
+                <th>DATE ET HEURE</th>
+            </tr>
+        </thead>
+ 
+ 
+        <tbody>
+        
+            <tr>
+                <td><?php echo $_POST['formule']; ?></td>
+                <td><?php echo $_POST['grille']; ?></td>
+                <td><?php echo $_POST['car']; ?></td>
+                <td><?php echo $_POST['lieu']; ?></td>
+                <td><?php echo $_POST['date_heure']; ?></td>
+            </tr>
+
+        </tbody>
+    </table><br><br>
+
+
+                 <!-- Form -->
+
+                 <form action="" method="post">
     
-    <label >Formule</label><br>
-    <label><?php echo $_POST['formule']; ?> </label><br>
+    
     <input type="hidden" name="formule" value="<?php echo $_POST['formule']; ?>">
-    <label >Prestation supplémentaire</label><br>
-    <label><?php echo $_POST['grille']; ?> </label><br>
     <input type="hidden" name="grille" value="<?php echo $_POST['grille']; ?>">
-    <label >Catégorie de véhicule</label><br>
-    <label><?php echo $_POST['car']; ?> </label><br>
     <input type="hidden" name="car" value="<?php echo $_POST['car']; ?>">
-    <label >Lieu</label><br>
-    <label><?php echo $_POST['lieu']; ?> </label><br>
     <input type="hidden" name="lieu" value="<?php echo $_POST['lieu']; ?>">
-    <label >La date et l'heure </label><br>
-    <label><?php echo $_POST['date_heure']; ?> </label><br>
     <input type="hidden" name="date_heure" value="<?php echo $_POST['date_heure']; ?>">
 
-    <a href="rdv">Modifier</a>
-    <button type="submit" name="valider">Valider la réservation</button>
+    <button class="btn btn-default" href="rdv">Modifier</button>
+    <button class="btn btn-success" type="submit" name="valider">Valider la réservation</button>
 
     
     </form>
-
+    </center>
 
     <?php
 
-include 'config.php';
+
 
 if(isset($_POST['valider'])){
 
@@ -51,33 +86,41 @@ if(isset($_POST['valider'])){
     $date_heure = addslashes($_POST ['date_heure']);
     
     $reservation_query = mysqli_query($conn, "INSERT INTO reservation (numero_res,formule,prestation_supp,cat_vehicule,lieu,date_heure,id_user) VALUES ('','$formule','$prestation_supp','$cat_vehicule','$lieu','$date_heure','$id')");
-    //---- Send Email---------------------------
-        /*
-    // the message
-    $msg = "Welcome to phpTest: \n Your login informations : \n Email = ".$email." Password = ".$password." \n Now you can log into your account. ";
-    // use wordwrap() if lines are longer than 70 characters
-    $msg = wordwrap($msg,70);
-    // send email
-    mail($email,"Welcome to phpTest",$msg);
-    //-------End sending Email-----------------
-    */
+    
+
+
     if ($reservation_query) {
         $email = $_SESSION['email'];
-        $msg = '
+        $msg = "
         
         <h1>Récapitulatif de la réservation</h1>
     
-    <label >Formule</label><br>
-    <label><?php echo $_POST["formule"]; ?> </label><br>
-    <label >Prestation supplémentaire</label><br>
-    <label><?php echo $_POST["grille"]; ?> </label><br>
-    <label >Catégorie de véhicule</label><br>
-    <label><?php echo $_POST["car"]; ?> </label><br>
-    <label >Lieu</label><br>
-    <label><?php echo $_POST["lieu"]; ?> </label><br>
-    <label >La date et l\'heure </label><br>
-    <label><?php echo $_POST["date_heure"]; ?> </label><br>
-        ';
+        <table id=\"example\" class=\"display table table-striped table-bordered\" cellspacing=\"0\" border=\"1\" >
+        <thead>
+            <tr>
+                <th>FORMULE</th>
+                <th>PRESTATION SUPPLEMENTAIRE</th>
+                <th>CATEGORIE VEHICULE</th>
+                <th>LIEU</th>
+                <th>DATE ET HEURE</th>
+            </tr>
+        </thead>
+ 
+ 
+        <tbody>
+        
+            <tr>
+                <td>". $_POST['formule'] . "</td>
+                <td>". $_POST['grille']." </td>
+                <td>". $_POST['car']." </td>
+                <td>". $_POST['lieu']." </td>
+                <td>". $_POST['date_heure'] ."</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <br>
+        ";
 
         // Always set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";
@@ -87,11 +130,11 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     } else {
         echo "Opération échouée";
     }
-    
-    
+
   }
  
 ?>
+
     
     </div>
 </body>

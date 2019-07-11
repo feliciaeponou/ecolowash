@@ -7,7 +7,7 @@
 			 <div>
              <input 
   type="radio" name="car" 
-  id="sad" class="input-hidden" value="citadine" />
+  id="sad" class="input-hidden" value="Citadine" />
 <label for="sad">
 <img class="img-responsive" src="images/compact.png" alt="compact" />
 </label>
@@ -21,7 +21,7 @@
 		   <div class="col-md-4 ">
 			<div data-selected="false" data-value="Berline" data-id="categorie-berline">
 			 <div>
-             <input  type="radio" name="car" id="happy" class="input-hidden" value="berline" />
+             <input  type="radio" name="car" id="happy" class="input-hidden" value="Berline" />
 <label for="happy">
 <img class="img-responsive" src="images/berline.png" alt="berline" />
 </label>

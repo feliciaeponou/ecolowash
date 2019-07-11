@@ -185,7 +185,7 @@ hr {
 <div class="col-md-3">
 <input 
   type="radio" name="lieu" 
-  id="domicile" class="input-hidden" value="domicile" />
+  id="domicile" class="input-hidden" value="Domicile" />
 <label for="domicile">
 <img class="center" src="images/domicile.png" width="100"><br>
 A domicile
@@ -194,7 +194,7 @@ A domicile
 <div class="col-md-3">
 <input 
   type="radio" name="lieu" 
-  id="centre" class="input-hidden" value="centre" />
+  id="centre" class="input-hidden" value="En Centre" />
 <label for="centre">
 <img class="center" src="images/centre.png" width="100"><br>
 En centre
@@ -203,7 +203,7 @@ En centre
 <div class="col-md-3"></div>
 </div>
 <br><br><hr>
-<h3 >Date et heure  </h3>
+<h3 >Dates et heures auxquelles vous pouvez prendre rendez-vous </h3>
 
     <?php include('datetimepicker.php'); ?>
 

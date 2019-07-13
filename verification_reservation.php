@@ -10,7 +10,11 @@ $id = $_SESSION['id_user'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CDN of beautiful modals -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title></title>
+  
 </head>
 <body>
 
@@ -65,7 +69,7 @@ $id = $_SESSION['id_user'];
     <input type="hidden" name="date_heure" value="<?php echo $_POST['date_heure']; ?>">
 
     <button class="btn btn-default" href="rdv">Modifier</button>
-    <button class="btn btn-success" type="submit" name="valider">Valider la réservation</button>
+    <button class="btn btn-success valider" type="submit" name="valider">Valider la réservation</button>
 
     
     </form>
@@ -84,15 +88,24 @@ if(isset($_POST['valider'])){
     $cat_vehicule = addslashes($_POST ['car']);
     $lieu = addslashes($_POST ['lieu']);
     $date_heure = addslashes($_POST ['date_heure']);
-    
     $reservation_query = mysqli_query($conn, "INSERT INTO reservation (numero_res,formule,prestation_supp,cat_vehicule,lieu,date_heure,id_user) VALUES ('','$formule','$prestation_supp','$cat_vehicule','$lieu','$date_heure','$id')");
     
 
 
     if ($reservation_query) {
+        echo "
+        <script>
+		$('.valider').click(function() {
+			swal({
+                title: 'Good job!',
+                text: 'You clicked the button!',
+                icon: 'success',
+              });
+		});
+    </script>
+        ";
         $email = $_SESSION['email'];
         $msg = "
-        
         <h1>Récapitulatif de la réservation</h1>
     
         <table id=\"example\" class=\"display table table-striped table-bordered\" cellspacing=\"0\" border=\"1\" >
@@ -128,14 +141,22 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
         mail($email,"Ecolowash : Récapitulatif des informations de la réservation",$msg,$headers);
     } else {
-        echo "Opération échouée";
+        echo "
+        <script>
+		$('.valider').click(function() {
+			$('.error').toggle();
+		});
+    </script>
+        ";
     }
 
   }
  
 ?>
 
+
     
     </div>
+
 </body>
 </html>

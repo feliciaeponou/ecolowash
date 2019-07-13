@@ -86,7 +86,7 @@ button:hover {
   margin: 0 2px;
   background-color: #bbbbbb;
   border: none;  
-  border-radius: 50%;
+  border-radius: 50%; 
   display: inline-block;
   opacity: 0.5;
 }
@@ -174,43 +174,12 @@ hr {
   </div>
 
   <div class="tab">
-  <center>
-  <br>
-  <br>
-
-<h3>Voulez une prestation à domicile ou en centre ?</h3> <br>
-
-<div class="row">
-<div class="col-md-3"></div>
-<div class="col-md-3">
-<input 
-  type="radio" name="lieu" 
-  id="domicile" class="input-hidden" value="Domicile" />
-<label for="domicile">
-<img class="center" src="images/domicile.png" width="100"><br>
-A domicile
-</label>
-</div>
-<div class="col-md-3">
-<input 
-  type="radio" name="lieu" 
-  id="centre" class="input-hidden" value="En Centre" />
-<label for="centre">
-<img class="center" src="images/centre.png" width="100"><br>
-En centre
-</label>
-</div>
-<div class="col-md-3"></div>
-</div>
-<br><br><hr>
-<h3 >Dates et heures auxquelles vous pouvez prendre rendez-vous </h3>
+  <center><hr>
+<h2 >4- Dates et heures auxquelles vous pouvez prendre rendez-vous </h2>
 
     <?php include('datetimepicker.php'); ?>
 
-<br><hr>
-<h3>Méthode de paiement</h3><br>
-<a name="payer" > <img src="images/paiementYup.png" width="100" alt="YUP" ></a>
-
+<br>
     </center>
   </div>
 

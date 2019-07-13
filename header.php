@@ -43,6 +43,10 @@ session_start();
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 	<!-- //Web-Fonts -->
 
+	<!-- CDN of beautiful modals -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">

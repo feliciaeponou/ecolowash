@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+.stage {
+padding:40px;
+text-align:center;}
+.readmore a {
+  line-height:1em;
+  letter-spacing:0.06em;
+  font-family: 'Lato', sans-serif;
+  font-weight:normal;
+  font-size:16px;
+  text-decoration:none;
+  color:#fff;
+  background:#231f20;
+  display:inline-block;
+  padding:15px 12px 15px 15px;
+  transition:background 200ms;
+  border-radius:4px;
+}
+.readmore a:hover {
+  background:#46ba79;
+}
+.readmore a:after {
+  font-family: 'FontAwesome', sans-serif;
+  font-weight:300;
+  content: "\f105";
+  margin-left:20px;
+  color:#46ba79;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
+}
+
+a:hover:after {
+  color:#231f20;
+}

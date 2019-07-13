@@ -89,7 +89,7 @@ session_start();
 				</div>
 				<div class="row">
 					<div class="col-4 stats-grid-w3-agile text-center border-right">
-						<div class='numscroller font-weight-bold' data-slno='1' data-min='0' data-max='1280' data-delay='.5' data-increment="1">1280</div>
+						<div class='numscroller font-weight-bold' data-slno='1' data-min='0' data-max='8080' data-delay='.5' data-increment="1">8080</div>
 						<p class="text-capitalize">Litres d’eau économisée</p>
 					</div>
 					<div class="col-8 right-text-about pl-sm-5 pl-3 mt-lg-3">

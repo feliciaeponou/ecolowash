@@ -3,8 +3,8 @@
 <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="assets/css/header1.css">
 <script src="assets/js/header.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner" >
 	
@@ -40,7 +40,7 @@
       
     </li>
       <li class="nav-item">
-        <a class="nav-link" href="#nos_valeurs" >Inscription</a>
+        <a class="nav-link" href="#inscription" >Inscription</a>
       </li> 
       <li class="nav-item">
         <a class="nav-link" href="#contacts">Contacts</a>

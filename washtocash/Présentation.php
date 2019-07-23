@@ -1,3 +1,16 @@
+<?php include('header.php'); ?>
+
+
+<section class="cd-section cd-section--bg-fixed" id="plan_marketing">
+      <div class="container container--sm">
+        <div class="text-component text--center">
+        <h1 style="font-size : 70px; font-family : cursive; ">
+            C'EST QUOI WASHTOCASH ? 
+</h1><br>
+          
+        </div>
+      </div>
+    </section>
 <div class="row">
            <div class="col-md-12">
              <h1 style="text-align : center; font-family : fantasy;">CONTEXTE</h1><br>

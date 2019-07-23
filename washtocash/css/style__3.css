@@ -58,7 +58,7 @@
 	color: rgba(255,255,255,0.8);
 	text-transform: capitalize;
 }
-.cb-slideshow li:nth-child(1) span { background-image: url(../assets/img/slider1.jpg) }
+.cb-slideshow li:nth-child(1) span { background-image: url(../assets/img/slide-2.jpg) }
 .cb-slideshow li:nth-child(2) span {
     background-image: url(../assets/img/slider2.jpg);
     -webkit-animation-delay: 10s;
@@ -68,7 +68,7 @@
     animation-delay: 10s;
 }
 .cb-slideshow li:nth-child(3) span {
-    background-image: url(../assets/img/slider3.jpg);
+    background-image: url(../assets/img/slide-1.jpg);
     -webkit-animation-delay: 20s;
     -moz-animation-delay: 20s;
     -o-animation-delay: 20s;
@@ -76,7 +76,8 @@
     animation-delay: 20s;
 }
 .cb-slideshow li:nth-child(4) span {
-    background-image: url(../assets/img/slider4.jpg);
+	background-image: url(../assets/img/slide-3.jpg);
+	background-size : cover;
     -webkit-animation-delay: 30s;
     -moz-animation-delay: 30s;
     -o-animation-delay: 30s;

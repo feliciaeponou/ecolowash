@@ -167,14 +167,8 @@ if(isset($_POST['inscription'])){
     }
     
     }else{
-	      echo "L'addresse mail existe déjà, vous ne pouvez vous inscrire deux fois. Cliquez";
-        echo "<br><b>";
-        echo "<font color = 'green'>";
-        echo "<a href = 'connexion'>";
-        echo "ici";
-        echo "</b></a>";
-        echo "</font>";
-        echo " pour vous connecter.";
+	      echo "L'addresse mail existe déjà, vous ne pouvez vous inscrire deux fois";
+        
     }
   }
 
